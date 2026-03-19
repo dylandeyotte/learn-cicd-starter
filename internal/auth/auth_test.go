@@ -24,7 +24,7 @@ func TestAPIKey(t *testing.T) {
 		{
 			key:   "Authorization",
 			value: "h293hr928h3",
-			err:   "malformedomg authorization header",
+			err:   "malformed authorization header",
 		},
 		{
 			key:    "Authorization",
