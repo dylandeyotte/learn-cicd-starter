@@ -35,5 +35,5 @@ jobs:
         run: 'gcloud info'
       
       - name: docker
-        run: gcloud builds submit --tag us-central1-docker.pkg.dev/solid-binder-491221-g5/notely-ar-repo .
+        run: gcloud builds submit --tag us-central1-docker.pkg.dev/solid-binder-491221-g5/notely-ar-repo/notely:latest .
     
