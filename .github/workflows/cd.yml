@@ -35,8 +35,8 @@ jobs:
         run: 'gcloud info'
       
       - name: docker
-        run: gcloud builds submit --tag us-central1-docker.pkg.dev/solid-binder-491221-g5/notely-ar-repo/notely:latest .
+        run: gcloud builds submit --tag us-central1-docker.pkg.dev/solid-binder-491221-g5/notely-ar-repo/notely:${{ github.sha }} .
       
       - name: Deploy to Cloud Run
-        run: gcloud run deploy notely --image us-central1-docker.pkg.dev/solid-binder-491221-g5/notely-ar-repo/notely:latest --region us-central1 --allow-unauthenticated --project solid-binder-491221-g5 --max-instances=4
+        run: gcloud run deploy notely --image us-central1-docker.pkg.dev/solid-binder-491221-g5/notely-ar-repo/notely:${{ github.sha }} --region us-central1 --allow-unauthenticated --project solid-binder-491221-g5 --max-instances=4
     
